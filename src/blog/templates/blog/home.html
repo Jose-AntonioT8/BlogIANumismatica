@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block title %}La biblioteca{% endblock %}
+
+{% block content %}
+  <div class="page-intro">
+    <h2>Últimos apuntes</h2>
+    <p>Textos breves para identificar, conservar y empezar a coleccionar.</p>
+  </div>
+  <div class="catalog">
+    {% for article in articles %}
+      {% include "blog/_article_card.html" %}
+    {% empty %}
+      <p class="empty">No hay artículos publicados.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -27,6 +27,6 @@ Los artículos usarán un lenguaje sencillo y estarán organizados para que sea 
 
 ## Estilo y límites
 
-El diseño será limpio y fácil de leer, con una temática visual relacionada con monedas y coleccionismo. El contenido será divulgativo y no sustituirá la tasación ni el dictamen de un profesional sobre autenticidad o valor.
+El diseño será limpio y fácil de leer, con una interfaz amigable de biblioteca y colores amarronados. En el inicio, cada artículo muestra su autor. Dentro del artículo se leen el título y el autor. El contenido será divulgativo y no sustituirá la tasación ni el dictamen de un profesional sobre autenticidad o valor.
 
 La primera versión se centrará en leer artículos. No incluirá cuentas de usuario, comentarios ni funciones avanzadas.

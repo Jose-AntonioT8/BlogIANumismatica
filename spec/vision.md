@@ -12,7 +12,7 @@ Quien empieza una colección necesita consejos prácticos y comprensibles. La in
 
 Un blog en Django en el que cualquier visitante pueda encontrar y leer artículos divulgativos, y en el que un editor pueda crearlos, organizarlos y publicarlos desde el panel de administración, sin modificar código.
 
-La experiencia pública es de solo lectura. La página de inicio muestra los artículos publicados, las categorías permiten explorarlos y cada artículo se puede leer completo. La URL de cada artículo se forma con un slug único y legible, para que la dirección identifique el contenido. El diseño es limpio, fácil de leer y con una temática visual de monedas y coleccionismo, usable en el móvil y en el ordenador.
+La experiencia pública es de solo lectura. La página de inicio muestra los artículos publicados, con su autor, las categorías permiten explorarlos y cada artículo se puede leer completo. Dentro del artículo se muestran el título y el autor. La URL de cada artículo se forma con un slug único y legible, para que la dirección identifique el contenido. El diseño es limpio, fácil de leer y tiene una interfaz amigable de biblioteca, con colores amarronados, usable en el móvil y en el ordenador.
 
 ## Para quién es
 

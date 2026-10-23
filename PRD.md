@@ -43,6 +43,7 @@ Crear una aplicación Django para el blog con estos modelos:
 - **Article**
   - `title`: título del artículo.
   - `slug`: identificador para la URL, único.
+  - `author`: nombre del autor, visible en los listados y dentro del artículo.
   - `summary`: resumen breve para los listados.
   - `body`: contenido del artículo.
   - `category`: relación obligatoria con `Category`.
@@ -79,15 +80,16 @@ Las vistas públicas pueden implementarse con vistas genéricas de Django (`List
 
 - Los artículos deben ser breves, claros y adecuados para principiantes.
 - Los temas iniciales serán conservación de las monedas, identificación de piezas y series habituales para quien empieza.
-- El diseño debe facilitar la lectura en pantallas pequeñas y grandes.
+- La interfaz será amigable, con estilo de biblioteca y colores amarronados, y facilitará la lectura en pantallas pequeñas y grandes.
+- El inicio muestra el autor de cada artículo. La página del artículo muestra el título y el autor.
 - El contenido será divulgativo y no sustituirá la tasación ni el dictamen de un profesional sobre autenticidad o valor.
 
 ## 7. Criterios de aceptación
 
 - Un visitante puede abrir la página de inicio y ver los artículos publicados ordenados por fecha.
-- Cada artículo del listado muestra título, categoría y resumen, y enlaza a su página de detalle.
+- Cada artículo del listado muestra título, autor, categoría y resumen, y enlaza a su página de detalle.
 - La página de una categoría solo muestra artículos publicados asociados a ella.
-- La URL de un artículo publicado muestra su contenido completo.
+- La URL de un artículo publicado muestra el título, el autor y su contenido completo.
 - Un artículo no publicado no aparece en listados ni se puede consultar desde su URL pública.
 - Un administrador puede crear y modificar categorías y artículos desde Django Admin.
 - Las páginas públicas se pueden usar en móvil y ordenador y no requieren iniciar sesión.
