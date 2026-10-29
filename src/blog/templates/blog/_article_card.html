@@ -1,8 +1,0 @@
-<article class="card">
-  <h2>
-    <a href="{% url 'blog:article_detail' article.slug %}">{{ article.title }}</a>
-  </h2>
-  <p class="byline">{{ article.author }}</p>
-  <p class="shelf">{{ article.category.name }}</p>
-  <p class="summary">{{ article.summary }}</p>
-</article>
