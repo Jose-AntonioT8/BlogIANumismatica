@@ -1,0 +1,30 @@
+{% extends "articulos/base.html" %}
+
+{% block title %}Nueva pieza — El Gabinete{% endblock %}
+
+{% block content %}
+  <p class="kicker">Alta</p>
+  <h1>Nueva pieza</h1>
+  <p class="lede">Título, tipo, cuerpo y fecha de publicación. Con eso queda catalogada.</p>
+  <div class="rule" aria-hidden="true"></div>
+  <form class="sheet" method="post" action="{% url 'create' %}">
+    {% csrf_token %}
+    <label for="{{ form.title.id_for_label }}">Título</label>
+    {{ form.title }}
+    <p class="field-error">{{ form.title.errors.0 }}</p>
+
+    <label for="{{ form.piece_type.id_for_label }}">Tipo de pieza</label>
+    {{ form.piece_type }}
+    <p class="field-error">{{ form.piece_type.errors.0 }}</p>
+
+    <label for="{{ form.published_on.id_for_label }}">Fecha de publicación</label>
+    {{ form.published_on }}
+    <p class="field-error">{{ form.published_on.errors.0 }}</p>
+
+    <label for="{{ form.body.id_for_label }}">Cuerpo</label>
+    {{ form.body }}
+    <p class="field-error">{{ form.body.errors.0 }}</p>
+
+    <button type="submit">Publicar en el gabinete</button>
+  </form>
+{% endblock %}

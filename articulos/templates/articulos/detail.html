@@ -1,0 +1,17 @@
+{% extends "articulos/base.html" %}
+{% load gabinete %}
+
+{% block title %}{{ article.title }} — El Gabinete{% endblock %}
+{% block main_attrs %}id="article"{% endblock %}
+
+{% block content %}
+  <a class="back" href="{% url 'index' %}">Volver al listado</a>
+  <p class="badge">{{ article.label }}</p>
+  <time datetime="{{ article.published_on|date:'Y-m-d' }}">{{ article.published_on|fecha_es }}</time>
+  <h1>{{ article.title }}</h1>
+  <div class="prose">
+    {% for lines in article.body|parrafos %}
+      <p>{% for line in lines %}{{ line }}{% if not forloop.last %}<br>{% endif %}{% endfor %}</p>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}El Gabinete — Numismática{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,650&family=Literata:opsz,wght@7..72,400;7..72,650&family=Source+Sans+3:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="{% url 'index' %}">
+        <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="none" stroke="#c6a15a" stroke-width="1.6"></circle>
+          <circle cx="24" cy="24" r="15.5" fill="none" stroke="#c6a15a" stroke-width="0.8"></circle>
+          <text x="24" y="29" text-anchor="middle" font-size="16" fill="#f6f1e6" font-family="Georgia">G</text>
+        </svg>
+        <span>
+          <strong>El Gabinete</strong>
+          <small>Blog de numismática</small>
+        </span>
+      </a>
+      <nav>
+        <a href="{% url 'index' %}" {% if section == 'portada' %}aria-current="page"{% endif %}>Artículos</a>
+        <a href="{% url 'create' %}" {% if section == 'nueva' %}aria-current="page"{% endif %}>Nueva pieza</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap" {% block main_attrs %}{% endblock %}>
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <p class="footer-inner">El Gabinete · práctica SDD · Máster de FP en Inteligencia Artificial y Big Data</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[project]
+name = "el-gabinete"
+version = "1.2.0"
+description = "Blog local de numismática. MVP descrito en PRD.md."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "django>=5.2,<6",
+    "mcp>=1.2",
+]
+
+[tool.uv]
+package = false

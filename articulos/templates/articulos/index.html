@@ -1,0 +1,44 @@
+{% extends "articulos/base.html" %}
+{% load gabinete %}
+
+{% block content %}
+  <p class="kicker">Portada</p>
+  <h1>Piezas y lecturas</h1>
+  <p class="lede">Notas breves sobre monedas, billetes y las marcas que dejan los talleres.</p>
+  <div class="rule" aria-hidden="true"></div>
+
+  {% if total %}
+    <nav class="filters" aria-label="Tipo de pieza">
+      {% for name in filters %}
+        {% if name == 'Todas' %}
+          <a href="{% url 'index' %}" {% if selected == name %}aria-current="page"{% endif %}>{{ name }}</a>
+        {% else %}
+          <a href="{% url 'index' %}?tipo={{ name }}" {% if selected == name %}aria-current="page"{% endif %}>{{ name }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  {% endif %}
+
+  {% if not total %}
+    <section class="empty">
+      <h2>El gabinete está vacío</h2>
+      <p>Todavía no hay piezas catalogadas.</p>
+      <a class="button" href="{% url 'create' %}">Catalogar la primera pieza</a>
+    </section>
+  {% elif not articles %}
+    <section class="empty">
+      <h2>No hay piezas de este tipo.</h2>
+    </section>
+  {% else %}
+    {% for article in articles %}
+      <a class="card" href="{% url 'detail' article.slug %}">
+        <div class="meta">
+          <time datetime="{{ article.published_on|date:'Y-m-d' }}">{{ article.published_on|fecha_es }}</time>
+          <span class="badge">{{ article.label }}</span>
+        </div>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.body|excerpt }}</p>
+      </a>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

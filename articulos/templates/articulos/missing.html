@@ -1,0 +1,11 @@
+{% extends "articulos/base.html" %}
+
+{% block title %}Artículo — El Gabinete{% endblock %}
+
+{% block content %}
+  <section class="empty">
+    <h1>Pieza no encontrada</h1>
+    <p>Ese artículo no está en el gabinete.</p>
+    <a class="button" href="{% url 'index' %}">Volver al listado</a>
+  </section>
+{% endblock %}
