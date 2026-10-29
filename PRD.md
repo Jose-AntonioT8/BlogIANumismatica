@@ -137,7 +137,7 @@ En la portada, con el filtro Todas, se ven en este orden: onza, peseta, ceca, re
 | `GET /nueva/` | Formulario de alta. |
 | `POST /nueva/` | Crea el artículo y abre su detalle, o vuelve a mostrar los errores. |
 
-La interfaz MCP local (`servidor_mcp.py`, `http://127.0.0.1:8001/mcp`) ofrece las mismas tres operaciones: listar, abrir por identificador y publicar. Publicar exige título, cuerpo, fecha y tipo, con los mensajes de esta sección. No hay borradores.
+La interfaz MCP local (`servidor_mcp.py`, `http://127.0.0.1:8080/mcp`) ofrece las mismas tres operaciones: listar, abrir por identificador y publicar. Publicar exige título, cuerpo, fecha y tipo, con los mensajes de esta sección. No hay borradores.
 
 ## 9. Criterios de aceptación
 

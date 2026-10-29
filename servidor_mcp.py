@@ -49,4 +49,6 @@ def crear_articulo(titulo: str, cuerpo: str, fecha: str, tipo: str) -> dict:
 
 
 if __name__ == '__main__':
-    mcp.run(transport='streamable-http', host='127.0.0.1', port=8001)
+    import uvicorn
+
+    uvicorn.run('gabinete.asgi:application', host='127.0.0.1', port=8080)

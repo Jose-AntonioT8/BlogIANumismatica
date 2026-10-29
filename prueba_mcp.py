@@ -5,7 +5,7 @@ from mcp.client.streamable_http import streamable_http_client
 
 
 async def main():
-    async with streamable_http_client('http://127.0.0.1:8001/mcp') as (read, write):
+    async with streamable_http_client('http://127.0.0.1:8080/mcp') as (read, write):
         async with ClientSession(read, write) as session:
             await session.initialize()
             tools = await session.list_tools()

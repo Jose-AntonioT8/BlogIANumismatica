@@ -25,13 +25,7 @@ uv run python manage.py test
 
 Los tests usan una base temporal. No modifican `db.sqlite3`.
 
-Interfaz MCP de los mismos artículos, en otro proceso:
-
-```powershell
-uv run python servidor_mcp.py
-```
-
-Queda en [http://127.0.0.1:8001/mcp](http://127.0.0.1:8001/mcp). Herramientas: `listar_articulos`, `obtener_articulo` y `crear_articulo`. Crear publica la pieza; no hay borradores.
+El mismo servidor expone la interfaz MCP en [http://127.0.0.1:8080/mcp](http://127.0.0.1:8080/mcp). Herramientas: `listar_articulos`, `obtener_articulo` y `crear_articulo`. Crear publica la pieza; no hay borradores.
 
 ## Mapa de ficheros
 
@@ -51,7 +45,7 @@ Queda en [http://127.0.0.1:8001/mcp](http://127.0.0.1:8001/mcp). Herramientas: `
 | `articulos/forms.py` | Alta y mensajes de validación. |
 | `articulos/servicio.py` | Listar, abrir y crear artículos para la interfaz MCP. |
 | `herramientas.py` | Arranca Django y llama a ese servicio. |
-| `servidor_mcp.py` | Servidor MCP en el puerto 8001. |
+| `servidor_mcp.py` | Herramientas MCP, servidas en `/mcp` del puerto 8080. |
 | `articulos/views.py` | Portada, detalle, alta y 404. |
 | `articulos/text.py` | Fecha en español, extracto y párrafos. |
 | `articulos/seed_data.py` | Los cuatro artículos de ejemplo. |

@@ -6,7 +6,7 @@ Si el comportamiento cambia, este fichero, el PRD y el resto de `spec/` se actua
 
 El ejemplo `servidor_mcp.py` deja de ser un blog de robótica con borradores. Pasa a ser la interfaz local de los artículos de Django: listar, abrir y publicar. Publicar usa el mismo formulario y los mismos mensajes que la web. No añade borradores, cuentas ni otra base de datos.
 
-El servidor escucha en `http://127.0.0.1:8001/mcp`.
+El servidor escucha en `http://127.0.0.1:8080/mcp`.
 
 ## 2026-10-29 — Django, Python y uv
 

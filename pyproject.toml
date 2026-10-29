@@ -7,6 +7,7 @@ requires-python = ">=3.12,<3.14"
 dependencies = [
     "django>=5.2,<6",
     "mcp>=1.2",
+    "ollama>=0.6.3",
 ]
 
 [tool.uv]
